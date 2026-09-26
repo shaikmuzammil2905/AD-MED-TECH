@@ -49,7 +49,7 @@ export default function ServiceDetail() {
             </div>
             <div>
               <span className="badge" style={{ marginBottom: 12 }}>
-                <span className="badge-dot"></span> Service
+                <span className="badge-dot"></span> Service Spotlight
               </span>
               <h1 className="page-hero-title">{service.title}</h1>
             </div>
@@ -79,6 +79,18 @@ export default function ServiceDetail() {
           <div className="service-detail-grid">
             {/* Main Content */}
             <div className="service-detail-content">
+              {/* Dynamic Service Domain Image */}
+              {service.image && (
+                <div className="anim" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: 36, height: 340, boxShadow: 'var(--shadow-md)' }}>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    loading="eager"
+                  />
+                </div>
+              )}
+
               <div className="anim">
                 <h2 id="service-detail-heading">Overview</h2>
                 <p>{service.intro}</p>
@@ -167,7 +179,7 @@ export default function ServiceDetail() {
 
               {/* Technologies */}
               <div className="sidebar-card">
-                <h3>Technologies & Tools</h3>
+                <h3>Technologies &amp; Tools</h3>
                 <div className="sidebar-tech-tags">
                   {service.technologies.map((tech, i) => (
                     <span key={i} className="sidebar-tech-tag">{tech}</span>

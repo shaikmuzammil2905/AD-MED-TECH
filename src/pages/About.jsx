@@ -41,20 +41,16 @@ export default function About() {
       <section className="section about-section" aria-labelledby="about-overview-heading">
         <div className="container">
           <div className="about-grid">
-            {/* Images */}
+            {/* Images Collage matching image copy 15.png */}
             <div className="about-images anim anim-left">
               <div className="about-img large">
-                <img src="/images/hero-bg.png" alt="AD MedTech Solutions team at work" loading="lazy" />
+                <img src="/images/hero-bg.png" alt="Doctor with holographic medical interface" loading="eager" />
               </div>
               <div className="about-img">
-                <img src="/images/hero-mobile.png" alt="Healthcare technology solutions" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Software development coding" loading="lazy" />
               </div>
-              <div className="about-img" style={{ background: 'var(--yellow-bg)', borderRadius: 'var(--radius-lg)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', padding: 24, gap: 8 }}>
-                <div style={{ fontSize: 48 }}>🏥</div>
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 800, color: 'var(--charcoal)' }}>2024</div>
-                  <div style={{ fontSize: 13, color: 'var(--grey-text)' }}>Est. July 2024</div>
-                </div>
+              <div className="about-img">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud servers and digital infrastructure" loading="lazy" />
               </div>
             </div>
 
