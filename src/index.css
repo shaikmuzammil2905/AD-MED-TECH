@@ -597,9 +597,6 @@ button {
 }
 
 /* ============================================
-   HERO SECTION
-   ============================================ */
-/* ============================================
    HERO SECTION (FULL-WIDTH CONTINUOUS BANNER)
    ============================================ */
 .hero {
@@ -612,22 +609,20 @@ button {
   align-items: center;
   background-image: url('/images/hero-bg.png');
   background-size: cover;
-  background-position: 70% center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-color: #f8faf0;
 }
 
+/* Minimal overlay — image already has white left area built in */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(248, 250, 240, 1.0) 0%,
-    rgba(248, 250, 240, 1.0) 40%,
-    rgba(248, 250, 240, 0.90) 53%,
-    rgba(248, 250, 240, 0.35) 68%,
-    rgba(248, 250, 240, 0.05) 82%,
-    rgba(248, 250, 240, 0) 100%
+    rgba(248, 250, 240, 0.25) 0%,
+    rgba(248, 250, 240, 0.10) 45%,
+    rgba(248, 250, 240, 0) 65%
   );
   z-index: 1;
   pointer-events: none;
@@ -2344,24 +2339,26 @@ button {
   .section { padding: 56px 0; }
   .container { padding: 0 16px; }
 
-  /* Hero (Continuous Full-Width Background) */
+  /* Hero Mobile — portrait background image */
   .hero {
-    min-height: 560px;
-    background-position: 65% center;
+    min-height: 520px;
+    background-image: url('/images/hero-bg-mobile.png');
+    background-position: center top;
     background-size: cover;
     display: flex;
     align-items: center;
-    padding-top: calc(var(--header-height) + 24px);
-    padding-bottom: 48px;
+    padding-top: calc(var(--header-height) + 20px);
+    padding-bottom: 40px;
   }
 
+  /* Stronger overlay so text stays readable over the mobile portrait image */
   .hero-overlay {
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 255, 255, 0.92) 50%,
-      rgba(255, 255, 255, 0.65) 80%,
-      rgba(255, 255, 255, 0.2) 100%
+      rgba(248, 250, 240, 0.88) 0%,
+      rgba(248, 250, 240, 0.72) 55%,
+      rgba(248, 250, 240, 0.40) 80%,
+      rgba(248, 250, 240, 0.10) 100%
     );
   }
 
