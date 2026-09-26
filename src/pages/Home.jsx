@@ -15,55 +15,64 @@ export default function Home() {
 
   return (
     <div ref={animRef}>
-      {/* ====== HERO (FULL-WIDTH CONTINUOUS BANNER) ====== */}
+      {/* ====== HERO (RESTORED TO ORIGINAL DESIGN) ====== */}
       <section className="hero" aria-label="Hero">
-        {/* Soft responsive gradient overlay for text readability */}
-        <div className="hero-overlay" aria-hidden="true" />
+        <img
+          src="/images/hero-bg.png"
+          alt="AD MedTech Solutions - Technology & Healthcare"
+          className="hero-bg-image hero-animate-img"
+          loading="eager"
+        />
+
+        {/* Yellow curve divider */}
+        <div className="hero-yellow-curve" aria-hidden="true">
+          <svg viewBox="0 0 120 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+            <path d="M80 0 Q20 200 60 450 Q100 700 80 900 L120 900 L120 0 Z" fill="#f8faf0"/>
+            <path d="M60 0 Q0 220 40 450 Q80 680 60 900 L80 900 Q100 700 60 450 Q20 200 80 0 Z" fill="#d4e600" opacity="0.6"/>
+          </svg>
+        </div>
 
         <div className="container">
           <div className="hero-content">
             <div className="hero-badge hero-animate-1">
-              <span className="hero-badge-icon">🌱</span>
-              Innovating for a Healthier Tomorrow
+              <span className="hero-badge-icon">🏥</span>
+              Healthcare &amp; IT Excellence Since {new Date().getFullYear() - 2024 + 1}+ Years
             </div>
 
             <h1 className="hero-title hero-animate-2">
-              Technology-Driven<br />
-              <span className="highlight">Healthcare &amp; IT Solutions</span>
+              Powering Healthcare<br />
+              with <span className="highlight">Intelligent</span><br />
+              Technology
             </h1>
 
             <p className="hero-subtitle hero-animate-3">
-              Innovating Healthcare. Empowering Technology. Delivering Excellence.
+              Software · Cloud · AI · Medical Coding · Billing · GIS
             </p>
 
             <p className="hero-desc hero-animate-3">
-              <strong>AD MedTech Solutions Pvt. Ltd.</strong> is a technology-driven company operating across Healthcare,
-              Software Development, IT, Artificial Intelligence, Cloud Computing, Data Processing and GIS domains.
+              AD MedTech Solutions delivers <strong>custom software, cloud infrastructure, healthcare AI,
+              medical coding &amp; billing</strong>, GIS services and more — built for accuracy, scalability
+              and results.
             </p>
 
             <div className="hero-ctas hero-animate-4">
               <Link to="/services" className="btn btn-primary btn-lg" id="hero-explore-btn">
-                Explore Our Services →
+                Explore Services →
               </Link>
               <Link to="/contact" className="btn btn-secondary btn-lg" id="hero-contact-btn">
-                Contact Us →
+                Contact Us
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Floating service pills on the right side */}
-        <div className="hero-service-pills hero-animate-pills" aria-label="Quick Service Links">
+        {/* Service pills */}
+        <div className="hero-service-pills hero-animate-pills" aria-hidden="true">
           {SERVICES.slice(0, 5).map((s) => (
-            <Link
-              key={s.id}
-              to={`/services/${s.id}`}
-              className="hero-pill"
-              title={`View ${s.title}`}
-            >
+            <div key={s.id} className="hero-pill">
               <div className="hero-pill-icon">{s.icon}</div>
-              <span>{s.shortTitle}</span>
-            </Link>
+              {s.shortTitle}
+            </div>
           ))}
         </div>
       </section>
