@@ -1380,8 +1380,15 @@ button {
 }
 
 .footer-brand img {
-  height: 56px;
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  background: var(--white);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
   margin-bottom: 16px;
+  display: inline-block;
 }
 
 .footer-brand p {
@@ -1389,6 +1396,10 @@ button {
   color: rgba(255,255,255,0.5);
   line-height: 1.7;
   max-width: 240px;
+}
+
+.footer-col {
+  min-width: 0;
 }
 
 .footer-col h4 {
@@ -1420,11 +1431,17 @@ button {
   padding-left: 4px;
 }
 
+.footer-contact-col {
+  min-width: 0;
+}
+
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 14px;
+  min-width: 0;
+  width: 100%;
 }
 
 .footer-contact-icon {
@@ -1437,19 +1454,44 @@ button {
   justify-content: center;
   font-size: 15px;
   flex-shrink: 0;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
-.footer-contact-item span,
+.footer-contact-item span {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+  min-width: 0;
+}
+
 .footer-contact-item a {
   font-size: 13px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.65);
   line-height: 1.5;
   transition: var(--transition-fast);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .footer-contact-item a:hover {
   color: var(--white);
+}
+
+.footer-emails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.footer-emails a {
+  display: block;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .footer-bottom {

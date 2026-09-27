@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="footer-col">
+          <div className="footer-col footer-contact-col">
             <h4>Contact</h4>
             <address style={{ fontStyle: 'normal' }}>
               <div className="footer-contact-item">
@@ -83,7 +83,7 @@ export default function Footer() {
               </div>
               <div className="footer-contact-item">
                 <div className="footer-contact-icon">✉️</div>
-                <div>
+                <div className="footer-emails">
                   <a href={`mailto:${CONTACT_INFO.emailInfo}`}>{CONTACT_INFO.emailInfo}</a>
                   <a href={`mailto:${CONTACT_INFO.emailHr}`}>{CONTACT_INFO.emailHr}</a>
                 </div>
