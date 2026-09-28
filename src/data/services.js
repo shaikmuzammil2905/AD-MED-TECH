@@ -622,7 +622,7 @@ export const CAREER_PERKS = [
 ]
 
 export const STATS = [
-  { icon: '📅', value: '2+', label: 'Years of Excellence', note: 'Since 23 July 2024' },
+  { icon: 'TROPHY_ICON', value: '2+', label: 'Years of Excellence', note: 'Since July 2024' },
   { icon: '👥', value: '80+', label: 'Skilled Professionals', note: '' },
   { icon: '🤝', value: '100%', label: 'Client Satisfaction', note: '' },
   { icon: '🌐', value: '100+', label: 'Projects Delivered', note: '' },

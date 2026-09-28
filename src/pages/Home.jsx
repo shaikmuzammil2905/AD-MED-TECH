@@ -69,7 +69,24 @@ export default function Home() {
           <div className="stats-grid">
             {STATS.map((stat, i) => (
               <div key={i} className="stat-item anim" style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div className="stat-icon">{stat.icon}</div>
+                <div className="stat-icon">
+                  {stat.icon === 'TROPHY_ICON' ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M6 11H4.5a2.5 2.5 0 0 1 0-5H6" />
+                      <path d="M18 11h1.5a2.5 2.5 0 0 0 0-5H18" />
+                      <path d="M4 22h16" />
+                      <path d="M10 16.66V19c0 .55-.47.98-.97 1.21C7.85 20.75 7 22.24 7 24" />
+                      <path d="M14 16.66V19c0 .55.47.98.97 1.21C16.15 20.75 17 22.24 17 24" />
+                      <path d="M18 4H6v7a6 6 0 0 0 12 0V4Z" />
+                      <polygon points="12 8 13 10 15 10 13.5 11.5 14 13.5 12 12.5 10 13.5 10.5 11.5 9 10 11 10" fill="currentColor" stroke="none" />
+                      <path d="M12 1v1.5" />
+                      <path d="M8.5 2l1 1" />
+                      <path d="M15.5 2l-1 1" />
+                    </svg>
+                  ) : (
+                    stat.icon
+                  )}
+                </div>
                 <div className="stat-info">
                   <h3>
                     <AnimatedCounter value={stat.value} duration={2000} />
