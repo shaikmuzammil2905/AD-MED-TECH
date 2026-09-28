@@ -62,7 +62,7 @@ export default function About() {
               </h2>
               <p style={{ fontSize: 15, color: 'var(--grey-text)', lineHeight: 1.8, marginTop: 16 }}>
                 AD MedTech Solutions Pvt. Ltd. was established on <strong>23 July 2024</strong> with a vision
-                to bridge the gap between healthcare and technology. We are a dynamic team of 10+ skilled
+                to bridge the gap between healthcare and technology. We are a dynamic team of 80+ skilled
                 professionals committed to delivering quality solutions across multiple domains.
               </p>
               <p style={{ fontSize: 15, color: 'var(--grey-text)', lineHeight: 1.8, marginTop: 12 }}>
@@ -171,7 +171,7 @@ export default function About() {
               Built by <span>Passionate Experts</span>
             </h2>
             <p className="section-subtitle" style={{ margin: '12px auto 0' }}>
-              Our team of 10+ professionals brings together expertise in technology, healthcare and operations. Click any card to view details.
+              Our team of 80+ professionals brings together expertise in technology, healthcare and operations. Click any card to view details.
             </p>
           </div>
 
