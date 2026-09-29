@@ -4,6 +4,7 @@ import { SERVICES, WHY_CHOOSE, STATS, TECH_STACK, TRUSTED_PARTNERS, CONTACT_INFO
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import AnimatedCounter from '../components/AnimatedCounter'
 import Modal from '../components/Modal'
+import TechnologyStack from '../components/TechnologyStack'
 
 export default function Home() {
   const animRef = useScrollAnimation()
@@ -183,73 +184,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ====== TECHNOLOGY ====== */}
-      <section className="section tech-section" aria-labelledby="tech-heading">
-        <div className="container">
-          <div className="anim" style={{ textAlign: 'center' }}>
-            <p className="section-label" style={{ justifyContent: 'center' }}>Technology Stack</p>
-            <h2 className="section-title" id="tech-heading">
-              Technologies We <span>Master</span>
-            </h2>
-            <p className="section-subtitle" style={{ margin: '12px auto 0' }}>
-              Industry-leading platforms and frameworks driving our solutions.
-            </p>
-          </div>
-
-          <div 
-            className="anim" 
-            style={{ 
-              marginTop: 40, 
-              marginBottom: 40, 
-              cursor: 'pointer', 
-              textAlign: 'center',
-              width: '100%',
-              maxWidth: '900px',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              overflow: 'hidden',
-              borderRadius: 'var(--radius-lg)'
-            }} 
-            onClick={() => setActiveModalItem({
-              title: 'Technology Architecture',
-              icon: '⚙️',
-              image: './images/technology-architecture.png',
-              tagline: 'Robust & Scalable Infrastructure',
-              modalDesc: 'Our technology stack is built on a highly scalable, secure, and resilient architecture designed to power enterprise-grade applications and healthcare solutions.',
-              highlights: [
-                'Cloud-native deployment with automated auto-scaling',
-                'Advanced AI/ML pipelines for medical data processing',
-                'Secure, HIPAA-compliant data storage and encryption',
-                'High availability and zero-downtime performance'
-              ]
-            })}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && setActiveModalItem({
-              title: 'Technology Architecture',
-              icon: '⚙️',
-              image: './images/technology-architecture.png',
-              tagline: 'Robust & Scalable Infrastructure',
-              modalDesc: 'Our technology stack is built on a highly scalable, secure, and resilient architecture designed to power enterprise-grade applications and healthcare solutions.',
-              highlights: [
-                'Cloud-native deployment with automated auto-scaling',
-                'Advanced AI/ML pipelines for medical data processing',
-                'Secure, HIPAA-compliant data storage and encryption',
-                'High availability and zero-downtime performance'
-              ]
-            })}
-          >
-            <img 
-              src="./images/technology-architecture.png" 
-              alt="Technology Architecture" 
-              style={{ width: '100%', height: 'auto', display: 'block', transition: 'transform 0.3s ease' }} 
-              loading="lazy"
-              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            />
-          </div>
-        </div>
-      </section>
+      {/* ====== TECHNOLOGY STACK ====== */}
+      <TechnologyStack />
 
       {/* ====== TRUSTED PARTNERS ====== */}
       <section className="section trusted-section" aria-labelledby="partners-heading">
