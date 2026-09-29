@@ -54,7 +54,7 @@ const TechnologyDetailModal = ({ technology, isOpen, onClose, onPrev, onNext, ha
           <div className="tech-modal-header tech-modal-section">
             <div className="tech-modal-category">{technology.category}</div>
             <h2 className="tech-modal-title">
-              <span>{technology.logo}</span> {technology.name}
+              <img src={technology.logo} alt={technology.name} className="tech-modal-logo-img" /> {technology.name}
             </h2>
             <p className="tech-modal-desc">{technology.shortDescription}</p>
           </div>
@@ -147,7 +147,7 @@ const TechnologyCard = ({ technology, onClick }) => {
       }}
     >
       <div className="tech-icon-wrapper">
-        {technology.logo}
+        <img src={technology.logo} alt={technology.name} className="tech-card-logo-img" />
       </div>
       <h3 className="tech-card-title">{technology.name}</h3>
       <p className="tech-card-desc">{technology.shortDescription}</p>

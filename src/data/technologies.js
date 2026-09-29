@@ -2,7 +2,7 @@ export const TECHNOLOGIES = [
   {
     id: "java",
     name: "Java",
-    logo: "☕",
+    logo: "/images/technologies/java.jpg",
     category: "Enterprise Java Solutions",
     shortDescription: "Robust and scalable enterprise applications for modern businesses.",
     tags: ["Enterprise Apps", "Microservices", "Spring Boot"],
@@ -35,7 +35,7 @@ export const TECHNOLOGIES = [
   {
     id: "dotnet",
     name: ".NET",
-    logo: "🔷",
+    logo: "/images/technologies/dotnet.jpg",
     category: "Microsoft .NET Solutions",
     shortDescription: "Secure and performant applications for the Microsoft ecosystem.",
     tags: ["ASP.NET Core", "Web APIs", "Enterprise"],
@@ -68,7 +68,7 @@ export const TECHNOLOGIES = [
   {
     id: "aws",
     name: "Amazon Web Services",
-    logo: "🟠",
+    logo: "/images/technologies/aws.jpg",
     category: "AWS Cloud Infrastructure",
     shortDescription: "Scalable and secure cloud architecture for global reach.",
     tags: ["Cloud Infra", "Serverless", "DevOps"],
@@ -101,7 +101,7 @@ export const TECHNOLOGIES = [
   {
     id: "azure",
     name: "Microsoft Azure",
-    logo: "🔵",
+    logo: "/images/technologies/azure.jpg",
     category: "Azure Cloud Solutions",
     shortDescription: "Enterprise-grade cloud services and hybrid environments.",
     tags: ["Azure Cloud", "Hybrid Cloud", "AI Services"],
@@ -133,7 +133,7 @@ export const TECHNOLOGIES = [
   {
     id: "ai-ml",
     name: "AI & Machine Learning",
-    logo: "🧠",
+    logo: "/images/technologies/ai_ml.jpg",
     category: "Intelligent Automation & AI",
     shortDescription: "Data-driven insights and intelligent automation for healthcare.",
     tags: ["Machine Learning", "NLP", "Predictive Analytics"],
@@ -166,7 +166,7 @@ export const TECHNOLOGIES = [
   {
     id: "cloud-computing",
     name: "Cloud Computing",
-    logo: "☁️",
+    logo: "/images/technologies/cloud.jpg",
     category: "Comprehensive Cloud Services",
     shortDescription: "End-to-end cloud strategy, deployment, and management.",
     tags: ["Architecture", "Migration", "Security"],
@@ -199,7 +199,7 @@ export const TECHNOLOGIES = [
   {
     id: "gis",
     name: "GIS & Geospatial",
-    logo: "🗺️",
+    logo: "/images/technologies/gis.jpg",
     category: "Spatial Data & Mapping",
     shortDescription: "Location intelligence and geospatial data analysis.",
     tags: ["Mapping", "Location Intelligence", "Spatial Data"],
