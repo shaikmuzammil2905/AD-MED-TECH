@@ -2,7 +2,7 @@ export const TECHNOLOGIES = [
   {
     id: "java",
     name: "Java",
-    logo: "/images/technologies/java.jpg",
+    logo: "/images/technologies/java.svg",
     category: "Enterprise Java Solutions",
     shortDescription: "Robust and scalable enterprise applications for modern businesses.",
     tags: ["Enterprise Apps", "Microservices", "Spring Boot"],
@@ -35,7 +35,7 @@ export const TECHNOLOGIES = [
   {
     id: "dotnet",
     name: ".NET",
-    logo: "/images/technologies/dotnet.jpg",
+    logo: "/images/technologies/dotnet.svg",
     category: "Microsoft .NET Solutions",
     shortDescription: "Secure and performant applications for the Microsoft ecosystem.",
     tags: ["ASP.NET Core", "Web APIs", "Enterprise"],
@@ -133,7 +133,7 @@ export const TECHNOLOGIES = [
   {
     id: "ai-ml",
     name: "AI & Machine Learning",
-    logo: "/images/technologies/ai_ml.jpg",
+    logo: "/images/technologies/ai_ml.svg",
     category: "Intelligent Automation & AI",
     shortDescription: "Data-driven insights and intelligent automation for healthcare.",
     tags: ["Machine Learning", "NLP", "Predictive Analytics"],
@@ -166,7 +166,7 @@ export const TECHNOLOGIES = [
   {
     id: "cloud-computing",
     name: "Cloud Computing",
-    logo: "/images/technologies/cloud.jpg",
+    logo: "/images/technologies/cloud.svg",
     category: "Comprehensive Cloud Services",
     shortDescription: "End-to-end cloud strategy, deployment, and management.",
     tags: ["Architecture", "Migration", "Security"],
@@ -199,7 +199,7 @@ export const TECHNOLOGIES = [
   {
     id: "gis",
     name: "GIS & Geospatial",
-    logo: "/images/technologies/gis.jpg",
+    logo: "/images/technologies/gis.svg",
     category: "Spatial Data & Mapping",
     shortDescription: "Location intelligence and geospatial data analysis.",
     tags: ["Mapping", "Location Intelligence", "Spatial Data"],
