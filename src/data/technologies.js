@@ -68,7 +68,7 @@ export const TECHNOLOGIES = [
   {
     id: "aws",
     name: "Amazon Web Services",
-    logo: "/images/technologies/aws.jpg",
+    logo: "/images/technologies/aws.svg",
     category: "AWS Cloud Infrastructure",
     shortDescription: "Scalable and secure cloud architecture for global reach.",
     tags: ["Cloud Infra", "Serverless", "DevOps"],
@@ -101,7 +101,7 @@ export const TECHNOLOGIES = [
   {
     id: "azure",
     name: "Microsoft Azure",
-    logo: "/images/technologies/azure.jpg",
+    logo: "/images/technologies/azure.svg",
     category: "Azure Cloud Solutions",
     shortDescription: "Enterprise-grade cloud services and hybrid environments.",
     tags: ["Azure Cloud", "Hybrid Cloud", "AI Services"],
