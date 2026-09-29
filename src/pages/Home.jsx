@@ -203,11 +203,12 @@ export default function Home() {
               marginBottom: 40, 
               cursor: 'pointer', 
               textAlign: 'center',
-              background: '#fff',
-              padding: 16,
-              borderRadius: 16,
-              boxShadow: 'var(--shadow-md)',
-              border: '1px solid rgba(0,0,0,0.05)'
+              width: '100%',
+              maxWidth: '900px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              overflow: 'hidden',
+              borderRadius: 'var(--radius-lg)'
             }} 
             onClick={() => setActiveModalItem({
               title: 'Technology Architecture',
@@ -229,41 +230,23 @@ export default function Home() {
               icon: '⚙️',
               image: './images/technology-architecture.png',
               tagline: 'Robust & Scalable Infrastructure',
-              modalDesc: 'Our technology stack is built on a highly scalable, secure, and resilient architecture designed to power enterprise-grade applications and healthcare solutions.'
+              modalDesc: 'Our technology stack is built on a highly scalable, secure, and resilient architecture designed to power enterprise-grade applications and healthcare solutions.',
+              highlights: [
+                'Cloud-native deployment with automated auto-scaling',
+                'Advanced AI/ML pipelines for medical data processing',
+                'Secure, HIPAA-compliant data storage and encryption',
+                'High availability and zero-downtime performance'
+              ]
             })}
           >
             <img 
               src="./images/technology-architecture.png" 
               alt="Technology Architecture" 
-              style={{ maxWidth: '100%', borderRadius: 8 }} 
+              style={{ width: '100%', height: 'auto', display: 'block', transition: 'transform 0.3s ease' }} 
               loading="lazy"
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             />
-            <div style={{ 
-              marginTop: 16, 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: 8, 
-              fontWeight: 600, 
-              color: 'var(--primary)',
-              background: 'var(--primary-light)',
-              padding: '8px 16px',
-              borderRadius: 'var(--radius-full)'
-            }}>
-              <span>🔍 Click to view architectural details</span>
-            </div>
-          </div>
-
-          <div className="tech-grid">
-            {TECH_STACK.map((tech, i) => (
-              <div
-                key={i}
-                className="tech-card anim"
-                style={{ transitionDelay: `${i * 0.07}s` }}
-              >
-                <span className="tech-icon">{tech.icon}</span>
-                <span>{tech.name}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
