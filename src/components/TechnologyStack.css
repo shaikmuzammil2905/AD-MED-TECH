@@ -94,12 +94,13 @@
   margin-bottom: 24px;
   transition: var(--transition);
   overflow: hidden;
+  padding: 20px;
 }
 
 .tech-card-logo-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .tech-card:hover .tech-icon-wrapper {
