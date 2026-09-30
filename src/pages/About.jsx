@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CORE_VALUES, WHY_CHOOSE, TEAM_VALUES, CONTACT_INFO, WHATSAPP_MSG, TRUSTED_PARTNERS } from '../data/services'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Modal from '../components/Modal'
+import { openEmail } from '../utils/email'
 
 export default function About() {
   const animRef = useScrollAnimation()
@@ -91,7 +92,13 @@ export default function About() {
                   <div className="about-contact-icon">✉️</div>
                   <div className="about-contact-info">
                     <h4>Email</h4>
-                    <a href={`mailto:${CONTACT_INFO.emailInfo}`}>info@admedtech...</a>
+                    <a
+                      href={`mailto:${CONTACT_INFO.emailInfo}`}
+                      onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailInfo); }}
+                      title={`Send email to ${CONTACT_INFO.emailInfo}`}
+                    >
+                      {CONTACT_INFO.emailInfo}
+                    </a>
                   </div>
                 </div>
               </div>

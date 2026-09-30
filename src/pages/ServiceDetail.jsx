@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { SERVICES, CONTACT_INFO, WHATSAPP_MSG } from '../data/services'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { openEmail } from '../utils/email'
 
 export default function ServiceDetail() {
   const { serviceId } = useParams()
@@ -206,7 +207,12 @@ export default function ServiceDetail() {
                   <a href={`tel:${CONTACT_INFO.phone}`} style={{ fontSize: 14, color: 'var(--charcoal)', display: 'flex', gap: 8, alignItems: 'center' }}>
                     📞 {CONTACT_INFO.phoneDisplay}
                   </a>
-                  <a href={`mailto:${CONTACT_INFO.emailInfo}`} style={{ fontSize: 13, color: 'var(--grey-text)', display: 'flex', gap: 8, alignItems: 'center' }}>
+                  <a
+                    href={`mailto:${CONTACT_INFO.emailInfo}`}
+                    onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailInfo, `Enquiry: ${service?.title || 'Service'}`); }}
+                    style={{ fontSize: 13, color: 'var(--grey-text)', display: 'flex', gap: 8, alignItems: 'center' }}
+                    title={`Send email to ${CONTACT_INFO.emailInfo}`}
+                  >
                     ✉️ {CONTACT_INFO.emailInfo}
                   </a>
                 </div>

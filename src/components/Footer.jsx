@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { SERVICES, CONTACT_INFO, WHATSAPP_MSG } from '../data/services'
+import { openEmail } from '../utils/email'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -28,9 +29,10 @@ export default function Footer() {
               </a>
               <a
                 href={`mailto:${CONTACT_INFO.emailInfo}`}
+                onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailInfo); }}
                 className="social-link"
                 aria-label="Email"
-                title="Email us"
+                title={`Send email to ${CONTACT_INFO.emailInfo}`}
               >
                 ✉️
               </a>
@@ -85,8 +87,20 @@ export default function Footer() {
               <div className="footer-contact-item">
                 <div className="footer-contact-icon">✉️</div>
                 <div className="footer-emails">
-                  <a href={`mailto:${CONTACT_INFO.emailInfo}`}>{CONTACT_INFO.emailInfo}</a>
-                  <a href={`mailto:${CONTACT_INFO.emailHr}`}>{CONTACT_INFO.emailHr}</a>
+                  <a
+                    href={`mailto:${CONTACT_INFO.emailInfo}`}
+                    onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailInfo); }}
+                    title={`Send email to ${CONTACT_INFO.emailInfo}`}
+                  >
+                    {CONTACT_INFO.emailInfo}
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT_INFO.emailHr}`}
+                    onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailHr); }}
+                    title={`Send email to ${CONTACT_INFO.emailHr}`}
+                  >
+                    {CONTACT_INFO.emailHr}
+                  </a>
                 </div>
               </div>
             </address>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CONTACT_INFO, WHATSAPP_MSG, CAREER_PERKS } from '../data/services'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import Modal from '../components/Modal'
+import { openEmail } from '../utils/email'
 
 const OPEN_ROLES = [
   {
@@ -107,8 +108,10 @@ export default function Careers() {
             </a>
             <a
               href={`mailto:${CONTACT_INFO.emailHr}`}
+              onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailHr, 'Career Opportunity Enquiry - AD MedTech Solutions', 'Hello HR Team,\n\nI am interested in career opportunities at AD MedTech Solutions.\n\nName:\nPhone:\nPosition of Interest:\n\nThank you.'); }}
               className="btn btn-secondary btn-lg"
               id="careers-email-btn"
+              title={`Send email to ${CONTACT_INFO.emailHr}`}
             >
               ✉️ Email HR
             </a>
@@ -239,8 +242,10 @@ export default function Careers() {
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <a
                 href={`mailto:${CONTACT_INFO.emailHr}?subject=General Application - AD MedTech Solutions`}
+                onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailHr, 'General Application - AD MedTech Solutions', 'Hello HR Team,\n\nI would like to submit my application for any suitable openings at AD MedTech Solutions.\n\nFull Name:\nPhone Number:\nAreas of Expertise / Skills:\nYears of Experience:\n\nPlease find my resume attached.\n\nThank you.'); }}
                 className="btn btn-primary btn-lg"
                 id="general-apply-email-btn"
+                title={`Send resume to ${CONTACT_INFO.emailHr}`}
               >
                 ✉️ Send Resume
               </a>

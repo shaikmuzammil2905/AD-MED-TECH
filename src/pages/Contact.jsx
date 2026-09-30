@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CONTACT_INFO, WHATSAPP_MSG } from '../data/services'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { openEmail } from '../utils/email'
 
 const SERVICE_OPTIONS = [
   'Software Development',
@@ -53,21 +54,22 @@ export default function Contact() {
       return
     }
     setLoading(true)
-    // Simulate form submission — opens WhatsApp with message
-    const msg = encodeURIComponent(
-      `*New Contact Enquiry - AD MedTech Website*\n\n` +
-      `*Name:* ${form.name}\n` +
-      `*Email:* ${form.email}\n` +
-      `*Phone:* ${form.phone || 'N/A'}\n` +
-      `*Company:* ${form.company || 'N/A'}\n` +
-      `*Subject:* ${form.subject}\n\n` +
-      `*Message:*\n${form.message}`
-    )
+    const emailSubject = `[AD MedTech Website Enquiry] ${form.subject || 'General Inquiry'} - from ${form.name}`
+    const emailBody = 
+      `New Contact Enquiry from AD MedTech Website\n\n` +
+      `Full Name: ${form.name}\n` +
+      `Email Address: ${form.email}\n` +
+      `Phone Number: ${form.phone || 'N/A'}\n` +
+      `Company / Organization: ${form.company || 'N/A'}\n` +
+      `Subject: ${form.subject}\n\n` +
+      `Message:\n${form.message}\n\n` +
+      `Sent via AD MedTech Solutions Contact Form`
+
     setTimeout(() => {
-      window.open(`https://wa.me/${CONTACT_INFO.whatsapp}?text=${msg}`, '_blank', 'noopener,noreferrer')
+      openEmail(CONTACT_INFO.emailInfo, emailSubject, emailBody)
       setSubmitted(true)
       setLoading(false)
-    }, 800)
+    }, 400)
   }
 
   return (
@@ -127,8 +129,20 @@ export default function Contact() {
                 <div className="contact-info-icon">✉️</div>
                 <div className="contact-info-text">
                   <h4>Email</h4>
-                  <a href={`mailto:${CONTACT_INFO.emailInfo}`}>{CONTACT_INFO.emailInfo}</a>
-                  <a href={`mailto:${CONTACT_INFO.emailHr}`}>{CONTACT_INFO.emailHr}</a>
+                  <a
+                    href={`mailto:${CONTACT_INFO.emailInfo}`}
+                    onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailInfo); }}
+                    title={`Send email to ${CONTACT_INFO.emailInfo}`}
+                  >
+                    {CONTACT_INFO.emailInfo}
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT_INFO.emailHr}`}
+                    onClick={(e) => { e.preventDefault(); openEmail(CONTACT_INFO.emailHr); }}
+                    title={`Send email to ${CONTACT_INFO.emailHr}`}
+                  >
+                    {CONTACT_INFO.emailHr}
+                  </a>
                 </div>
               </div>
 
@@ -161,16 +175,29 @@ export default function Contact() {
                 {submitted ? (
                   <div className="form-success">
                     <span className="form-success-icon">✅</span>
-                    <h3>Message Sent!</h3>
-                    <p>Your enquiry has been forwarded to our team via WhatsApp. We'll get back to you shortly.</p>
-                    <button
-                      className="btn btn-primary"
-                      style={{ marginTop: 24 }}
-                      onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', company: '', subject: '', message: '' }) }}
-                      id="contact-send-another-btn"
-                    >
-                      Send Another Message
-                    </button>
+                    <h3>Message Prepared & Sent!</h3>
+                    <p>
+                      Your enquiry has been addressed directly to <strong>{CONTACT_INFO.emailInfo}</strong>.
+                      Our team will review your message and get back to you within 24 business hours.
+                    </p>
+                    <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginTop: 24 }}>
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', company: '', subject: '', message: '' }) }}
+                        id="contact-send-another-btn"
+                      >
+                        Send Another Message
+                      </button>
+                      <a
+                        href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(`Hello AD MedTech Solutions, I have just submitted a contact enquiry regarding: ${form.subject}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline-yellow"
+                        id="contact-followup-whatsapp-btn"
+                      >
+                        💬 Follow up on WhatsApp
+                      </a>
+                    </div>
                   </div>
                 ) : (
                   <>
