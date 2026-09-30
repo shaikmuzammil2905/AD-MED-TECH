@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Modal({ isOpen, onClose, title, icon, image, tagline, description, highlights = [], ctaText = 'Get in Touch', ctaLink = '/contact' }) {
   useEffect(() => {
@@ -61,9 +62,15 @@ export default function Modal({ isOpen, onClose, title, icon, image, tagline, de
           )}
 
           <div className="modal-actions">
-            <a href={ctaLink} className="btn btn-primary" onClick={onClose}>
-              {ctaText} →
-            </a>
+            {ctaLink && ctaLink.startsWith('http') ? (
+              <a href={ctaLink} className="btn btn-primary" onClick={onClose} target="_blank" rel="noopener noreferrer">
+                {ctaText} →
+              </a>
+            ) : (
+              <Link to={ctaLink || '/contact'} className="btn btn-primary" onClick={onClose}>
+                {ctaText} →
+              </Link>
+            )}
             <button className="btn btn-secondary" onClick={onClose}>
               Close Window
             </button>
