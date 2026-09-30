@@ -32,7 +32,7 @@ const TEAM_MEMBERS = [
       'Leads the organization’s technology strategy, digital transformation, software development initiatives, and technology-driven innovation.',
   },
   {
-    name: 'Bommidi Nageshwara Rao',
+    name: 'Bommidi Nageswara Rao',
     roleCategory: 'Operations Management',
     designation: 'Operations Manager',
     description:

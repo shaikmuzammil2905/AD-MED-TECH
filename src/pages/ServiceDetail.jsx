@@ -81,7 +81,7 @@ export default function ServiceDetail() {
             <div className="service-detail-content">
               {/* Dynamic Service Domain Image */}
               {service.image && (
-                <div className="anim" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: 36, height: 340, boxShadow: 'var(--shadow-md)' }}>
+                <div className="anim" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: 36, aspectRatio: '16 / 9', boxShadow: 'var(--shadow-md)' }}>
                   <img
                     src={service.image}
                     alt={service.title}

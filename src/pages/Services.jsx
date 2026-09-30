@@ -98,7 +98,7 @@ export default function Services() {
               >
                 <div>
                   {service.image && (
-                    <div style={{ height: 180, overflow: 'hidden', borderRadius: 'var(--radius-md)', marginBottom: 16, position: 'relative' }}>
+                    <div style={{ aspectRatio: '16 / 9', overflow: 'hidden', borderRadius: 'var(--radius-md)', marginBottom: 16, position: 'relative' }}>
                       <img
                         src={service.image}
                         alt={service.title}
