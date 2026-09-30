@@ -195,6 +195,12 @@ export default function About() {
               </div>
             ))}
           </div>
+
+          <div className="anim" style={{ textAlign: 'center', marginTop: 40 }}>
+            <Link to="/our-team" className="btn btn-primary" id="about-our-team-btn">
+              View Leadership &amp; Executive Team →
+            </Link>
+          </div>
         </div>
       </section>
 

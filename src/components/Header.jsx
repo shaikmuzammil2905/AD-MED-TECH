@@ -50,6 +50,9 @@ export default function Header() {
           <NavLink to="/about" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
             About Us
           </NavLink>
+          <NavLink to="/our-team" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
+            Our Team
+          </NavLink>
 
           {/* Services Dropdown */}
           <div className="services-dropdown-wrapper" ref={dropdownRef}>
@@ -137,6 +140,9 @@ export default function Header() {
             </Link>
             <Link to="/about" className={`mobile-nav-link${location.pathname === '/about' ? ' active' : ''}`}>
               About Us
+            </Link>
+            <Link to="/our-team" className={`mobile-nav-link${location.pathname === '/our-team' ? ' active' : ''}`}>
+              Our Team
             </Link>
             {/* Services with submenu */}
             <button

@@ -8,6 +8,7 @@ import ScrollToTopOnNav from './components/ScrollToTopOnNav'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
+const OurTeam = lazy(() => import('./pages/OurTeam'))
 const Services = lazy(() => import('./pages/Services'))
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'))
 const Careers = lazy(() => import('./pages/Careers'))
@@ -35,6 +36,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/our-team" element={<OurTeam />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:serviceId" element={<ServiceDetail />} />
             <Route path="/careers" element={<Careers />} />

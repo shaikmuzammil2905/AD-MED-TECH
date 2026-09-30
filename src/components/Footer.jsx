@@ -51,6 +51,7 @@ export default function Footer() {
             <nav className="footer-links" aria-label="Company links">
               <Link to="/">Home</Link>
               <Link to="/about">About Us</Link>
+              <Link to="/our-team">Our Team</Link>
               <Link to="/services">Services</Link>
               <Link to="/careers">Careers</Link>
               <Link to="/contact">Contact Us</Link>
