@@ -332,43 +332,60 @@ button {
 .header-whatsapp-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #ffffff !important;
-  font-size: 13.5px;
-  font-weight: 600;
-  padding: 8px 18px 8px 14px;
-  border-radius: var(--radius-full);
+  border-radius: 50%;
   text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  box-shadow: 0 3px 12px rgba(37, 211, 102, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 3px 14px rgba(37, 211, 102, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
   cursor: pointer;
-  line-height: 1;
-}
-
-.header-whatsapp-btn:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-  background: linear-gradient(135deg, #28e06c 0%, #0d7e71 100%);
-  color: #ffffff !important;
-}
-
-.whatsapp-icon-wrap {
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
+  padding: 0;
   flex-shrink: 0;
 }
 
-.whatsapp-icon-wrap svg {
-  width: 14px;
-  height: 14px;
+.header-whatsapp-btn:hover {
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
+  background: linear-gradient(135deg, #2ae670 0%, #0d7e71 100%);
+  color: #ffffff !important;
+}
+
+.header-whatsapp-btn svg {
+  width: 22px;
+  height: 22px;
   fill: #ffffff;
+  display: block;
+}
+
+.mobile-whatsapp-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-whatsapp-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.mobile-whatsapp-cta svg {
+  fill: #ffffff;
+  flex-shrink: 0;
 }
 
 .hamburger {
