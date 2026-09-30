@@ -296,8 +296,8 @@ export default function Contact() {
       <section className="map-section" aria-label="Office location map">
         <div className="map-wrapper">
           <iframe
-            title="AD MedTech Solutions Office Location - Guntur"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.9!2d80.4365!3d16.3067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a75c9e6726b7f%3A0x1!2sLakshmipuram%2C+Guntur%2C+Andhra+Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            title="AD MedTech Solutions Office Location - West Krishna Plaza, Guntur"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.6676!2d80.423258!3d16.312267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7563944cae5f%3A0x7995e2bb62de3bb1!2sWest%20Krishna%20Plaza!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen

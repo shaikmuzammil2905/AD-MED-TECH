@@ -114,29 +114,33 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="services-grid" style={{ marginTop: 48 }}>
+          <div className="services-grid" id="services-grid">
             {SERVICES.map((service, i) => (
               <Link
                 key={service.id}
                 to={`/services/${service.id}`}
                 className="service-card anim"
-                style={{ transitionDelay: `${(i % 6) * 0.07}s` }}
+                style={{ transitionDelay: `${(i % 6) * 0.05}s` }}
                 aria-label={`${service.title} - ${service.shortDesc}`}
               >
                 {service.image && (
-                  <div style={{ height: 140, overflow: 'hidden', borderRadius: 'var(--radius-sm)', marginBottom: 16 }}>
+                  <div className="service-card-image-wrap">
                     <img
                       src={service.image}
                       alt={service.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      className="service-card-image"
                       loading="lazy"
                     />
                   </div>
                 )}
-                <div className="service-card-icon">{service.icon}</div>
-                <h3>{service.shortTitle}</h3>
-                <p>{service.shortDesc}</p>
-                <div className="service-card-arrow">Learn More →</div>
+                <div className="service-card-body">
+                  <h3 className="service-card-title">{service.shortTitle}</h3>
+                  <p className="service-card-desc">{service.shortDesc}</p>
+                  <div className="service-card-arrow">
+                    <span>Learn More</span>
+                    <span className="arrow-icon">→</span>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
