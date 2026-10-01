@@ -1540,6 +1540,12 @@ button {
   margin-top: 2px;
 }
 
+.footer-contact-icon--email {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+
 .footer-contact-item span {
   font-size: 13.5px;
   color: #ffffff;
